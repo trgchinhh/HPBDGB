@@ -113,9 +113,6 @@ body {
   }
 }
 
-/*
-    Custom by Truong Chinh
-*/
 
 .tacgia {
     text-align: right;
@@ -189,8 +186,7 @@ transform-origin: top center;
 @media (max-width: 500px) {
 .envelope {
     transform: scale(0.6);
-}
-}
+}}
 
 
 .envelope:hover {
@@ -310,3 +306,45 @@ transform: rotateX(180deg);
 transform: translateX(-50%) translateY(-25%);
 }
 .envelope.open .heart { opacity: 0; }
+
+.cd-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+}
+
+.cd.spin {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+#music-btn {
+    padding: 10px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#music-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
